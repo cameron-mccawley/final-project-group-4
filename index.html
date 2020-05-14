@@ -4,17 +4,62 @@
         <meta charset="utf-8">
         <title>todo</title>
     </head>
-    <body>
-        <div id="nav">
+
+    <body> <div id="nav">
 
         </div>
         <div id="stat-block">
 
         </div>
         <div id="input">
-            <table id="speed-form">
 
+            <table id="speed-form">
+                <tbody>
+                    <tr>
+                        <td id="normal-speed" style>
+                            <label for="normal-input">
+                                Speed:
+                                <br>
+                                <input type = "number" id = "normal-input" min = "0" max = "95" step = "5"value = "30">
+                                ft.
+                            </label>
+                        </td>
+                        <td id="burrow-speed" style>
+                            <label for="burrow-input">
+                                Burrow Speed:
+                                <br>
+                                <input type = "number" id = "burrow-input" min = "0" max = "95" step = "5" value = "0">
+                                ft.
+                            </label>
+                        </td>
+                        <td id="climb-speed" style>
+                            <label for="climb-input">
+                                Climb Speed:
+                                <br>
+                                <input type = "number" id = "climb-input" min = "0" max = "95" step = "5" value = "0">
+                                ft.
+                            </label>
+                        </td>
+                        <td id="fly-speed" style>
+                            <label for="fly-input">
+                                Fly Speed:
+                                <br>
+                                <input type = "number" id = "fly-input" min = "0" max = "95" step = "5" value = "0"> 
+                                ft.
+                            </label>
+                        </td>
+                        <td id="swim-speed" style>
+                            <label for="swim-input">
+                                Swim Speed:
+                                <br>
+                                <input type = "number" id = "swim-input" min = "0" max = "95" step = "5"value = "0">
+                                ft.
+                            </label>
+                        </td>
+                    </tr>
+                </tbody>
             </table>
+            
             <table id="stats-form">
                 <tbody>
                     <tr>
@@ -81,9 +126,12 @@
                     </tr>
                 </tbody>
             </table>
+
         </div>
+
         <footer>
 
         </footer>
+    
     </body>
 </html>
