@@ -26,6 +26,6 @@ var monsterData = {
     tremorsense: 0,
     truesight: 0,
     telepathy: 0,
-    
+
     hpText: "4 (1d8)"
 };
