@@ -55,3 +55,42 @@ function getAllVariables(){
     //hp stuff
     monsterData.hpText = $('#hp-input').val();
 }
+<<<<<<< HEAD
+
+//returns the string to be dislpayed in the speed portion of stat block 
+function getSpeed(){
+    let speedArr = [monsterData.speed + " ft."];
+    if(monsterData.burrowSpeed > 0){
+        speedArr.push("burrow " + monsterData.burrowSpeed + " ft.");
+    }
+    if(monsterData.climbSpeed > 0){
+        speedArr.push("climb " + monsterData.climbSpeed + " ft.");
+    }
+    if(monsterData.flySpeed > 0){
+        speedArr.push("fly " + monsterData.flySpeed + " ft.");
+    }
+    if(monsterData.swimSpeed > 0){
+        speedArr.push("swim " + monsterData.swimSpeed + " ft.");
+    }
+    return speedArr.join(", ");
+}
+
+//returns string to be displayed under senses portion of stat block
+function getSenses(){
+    let sensesArr = [];
+    if(monsterData.blindsight > 0){
+        sensesArr.push("bindsite " + monsterData.blindsight + " ft.");
+    }
+    if(monsterData.darkvision > 0){
+        sensesArr.push("darkvision " + monsterData.darkvision + " ft.");
+    }
+    if(monsterData.tremorsense > 0){
+        sensesArr.push("tremorsense " + monsterData.tremorsense + " ft.");
+    }
+    if(monsterData.truesight > 0){
+        sensesArr.push("truesite " + monsterData.truesight + " ft.");
+    }
+    return sensesArr.join(", ");
+}
+=======
+>>>>>>> 9a7255b4b37880d23e12f52d93ea7e2faf9cc8c5
