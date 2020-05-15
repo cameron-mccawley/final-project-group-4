@@ -2,7 +2,9 @@
 <html>
     <head>
         <meta charset="utf-8">
-        <title>todo</title>
+        <title>Dungeon Dictionary</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="index.js"></script>
     </head>
 
     <body> <div id="nav">
@@ -12,6 +14,7 @@
 
         </div>
         <div id="input">
+            <!--Type-->
             <table id="type-form">
                 <tbody>
                     <tr>
@@ -75,6 +78,21 @@
                     </tr>
                 </tbody>
             </table>
+            
+            <!--HP-->
+            <table id="armor-hp-form">
+                <tr>
+                    <td>
+                        <label for="hp-input">
+                            Hitpoints: 
+                            <br>
+                            <input id="hp-input" type="text" value="4 (1d8)">
+                        </label>
+                    </td>
+                </tr>
+            </table>
+
+            <!--Speed-->
             <table id="speed-form">
                 <tbody>
                     <tr>
@@ -121,6 +139,7 @@
                     </tr>
                 </tbody>
           </table>
+          <!--Stats-->
           <table id="stats-form">
                 <tbody>
                     <tr>
@@ -182,6 +201,34 @@
                                 (
                                 <span id="cha-mod">+0</span>
                                 )
+                            </label>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <!--Senses-->
+            <table id="senses-form">
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="blindsight-input">
+
+                            </label>
+                        </td>
+                        <td>
+                            <lable for="darkvision-input">
+
+                            </lable>
+                        </td>
+                        <td>
+                            <lable for="tremorsense-input">
+
+                            </lable>
+                        </td>
+                        <td>
+                            <label for="truesite-input">
+
                             </label>
                         </td>
                     </tr>
