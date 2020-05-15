@@ -55,3 +55,20 @@ function getAllVariables(){
     //hp stuff
     monsterData.hpText = $('#hp-input').val();
 }
+
+function getSpeed(){
+    let speedArr = [monsterData.speed + " ft."];
+    if(monsterData.burrowSpeed > 0){
+        speedArr.push("burrow " + monsterData.burrowSpeed + " ft.");
+    }
+    if(monsterData.climbSpeed > 0){
+        speedArr.push("climb " + monsterData.climbSpeed + " ft.");
+    }
+    if(monsterData.flySpeed > 0){
+        speedArr.push("fly " + monsterData.flySpeed + " ft.");
+    }
+    if(monsterData.swimSpeed > 0){
+        speedArr.push("swim " + monsterData.swimSpeed + " ft.");
+    }
+    return speedArr.join(", ");
+}
