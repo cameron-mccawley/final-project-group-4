@@ -92,5 +92,3 @@ function getSenses(){
     }
     return sensesArr.join(", ");
 }
-=======
->>>>>>> 9a7255b4b37880d23e12f52d93ea7e2faf9cc8c5
