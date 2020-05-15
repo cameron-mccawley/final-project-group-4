@@ -55,7 +55,7 @@ function getAllVariables(){
     //hp stuff
     monsterData.hpText = $('#hp-input').val();
 }
-<<<<<<< HEAD
+
 
 //returns the string to be dislpayed in the speed portion of stat block 
 function getSpeed(){
