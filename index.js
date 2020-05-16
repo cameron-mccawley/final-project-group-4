@@ -38,6 +38,18 @@ function getMod(score){
     return Math.floor(score / 2) - 5;
 }
 
+function updateMod(stat){
+    $("#" + stat + "-mod").html(getPlusOrMinus(getMod($("#" + stat + "-score").val())));
+}
+
+function getPlusOrMinus(stat){
+    if(stat > 0){
+        return "+" + stat;
+    }else{
+        return stat;
+    }
+}
+
 function getAllVariables(){
     //type data
     monsterData.name = $('#name-input').val().trim();
@@ -104,5 +116,7 @@ function getSenses(){
 
 
 function generateStatblock(){
-    
+    getAllVariables();
+    let statBlock = $('#stat-block');
+
 }
