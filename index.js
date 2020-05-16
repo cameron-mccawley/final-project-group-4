@@ -119,4 +119,7 @@ function generateStatblock(){
     getAllVariables();
     let statBlock = $('#stat-block');
 
+    $('#monster-name').html(monsterData.name);
+    $('#monster-type').html(monsterData.size + " " + monsterData.type + (monsterData.tag == "" ? ", " : " (" + monsterData.tag + "), ") + monsterData.alignment);
+    
 }
