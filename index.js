@@ -121,5 +121,13 @@ function generateStatblock(){
 
     $('#monster-name').html(monsterData.name);
     $('#monster-type').html(monsterData.size + " " + monsterData.type + (monsterData.tag == "" ? ", " : " (" + monsterData.tag + "), ") + monsterData.alignment);
-    
+    $('#armor-class').html(monsterData.acText); //need to format this properly 
+    $('#hit-points').html(monsterData.hpText);
+    $('#speed').html(getSpeed())
+    $('#strpts').html(monsterData.strPoints + " (" + getPlusOrMinus(getMod(monsterData.strPoints)) + ")");
+    $('#dexpts').html(monsterData.dexPoints + " (" + getPlusOrMinus(getMod(monsterData.dexPoints)) + ")");
+    $('#conpts').html(monsterData.conPoints + " (" + getPlusOrMinus(getMod(monsterData.conPoints)) + ")");
+    $('#intpts').html(monsterData.intPoints + " (" + getPlusOrMinus(getMod(monsterData.intPoints)) + ")");
+    $('#wispts').html(monsterData.wisPoints + " (" + getPlusOrMinus(getMod(monsterData.wisPoints)) + ")");
+    $('#chapts').html(monsterData.chaPoints + " (" + getPlusOrMinus(getMod(monsterData.chaPoints)) + ")");
 }
