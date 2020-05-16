@@ -101,3 +101,8 @@ function getSenses(){
     }
     return sensesArr.join(", ");
 }
+
+
+function generateStatblock(){
+    
+}
