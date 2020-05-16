@@ -121,7 +121,7 @@ function getSenses(){
     return sensesArr.join(", ");
 }
 
-
+//called when the user clicks the generate statblock button
 function generateStatblock(){
     getAllVariables();
     let statBlock = $('#stat-block');
