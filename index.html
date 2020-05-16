@@ -5,15 +5,78 @@
         <title>Dungeon Dictionary</title>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="index.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 
-    <body> <div id="nav">
+    <body> 
+        <div id="nav">
 
         </div>
-        <div id="stat-block">
-
+        <!--stat block start-->
+        <div id="stat-block-wrapper">
+            <div id="stat-block" class="stat-block">
+                <hr class="orange-border" />
+                    <div class="section-left">
+                        <div class="creature-heading">
+                            <h1 id="monster-name">Monster</h1>
+                            <h2 id="monster-type">Size, type, alignment</h2>
+                        </div> <!-- creature heading -->
+                        <svg height="5" width="100%" class="tapered-rule">
+                            <polyline points="0,0 400,2.5 0,5"></polyline>
+                        </svg>
+                        <div class="top-stats">
+                            <div class="property-line first">
+                                <h4>Armor Class</h4>
+                                <p id="armor-class"></p>
+                            </div> <!-- property line -->
+                            <div class="property-line">
+                                <h4>Hit Points</h4>
+                                <p id="hit-points"></p>
+                            </div> <!-- property line -->
+                            <div class="property-line last">
+                                <h4>Speed</h4>
+                                <p id="speed"></p>
+                            </div> <!-- property line -->
+                            <svg height="5" width="100%" class="tapered-rule">
+                                <polyline points="0,0 400,2.5 0,5"></polyline>
+                            </svg>
+                            <div class="scores">
+                                <div class="scores-strength">
+                                    <h4>STR</h4>
+                                    <p id="strpts"></p>
+                                </div> <!-- scores strength -->
+                                <div class="scores-dexterity">
+                                    <h4>DEX</h4>
+                                    <p id="dexpts"></p>
+                                </div> <!-- scores dexterity -->
+                                <div class="scores-constitution">
+                                    <h4>CON</h4>
+                                    <p id="conpts"></p>
+                                </div> <!-- scores constitution -->
+                                <div class="scores-intelligence">
+                                    <h4>INT</h4>
+                                    <p id="intpts"></p>
+                                </div> <!-- scores intelligence -->
+                                <div class="scores-wisdom">
+                                    <h4>WIS</h4>
+                                    <p id="wispts"></p>
+                                </div> <!-- scores wisdom -->
+                                <div class="scores-charisma">
+                                    <h4>CHA</h4>
+                                    <p id="chapts"></p>
+                                </div> <!-- scores charisma -->
+                            </div> <!-- scores -->
+                            <svg height="5" width="100%" class="tapered-rule">
+                                <polyline points="0,0 400,2.5 0,5"></polyline>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
+        <!--stat block end-->
         <div id="input">
+            <button type="button" onclick="generateStatblock()">Generate Statblock</button>
             <!--Type-->
             <table id="type-form">
                 <tbody>
@@ -87,6 +150,13 @@
                             Hitpoints: 
                             <br>
                             <input id="hp-input" type="text" value="4 (1d8)">
+                        </label>
+                    </td>
+                    <td>
+                        <label for="ac-input">
+                            Armor Class: 
+                            <br>
+                            <input id="ac-input" type="text" value="16 (natural armor)">
                         </label>
                     </td>
                 </tr>
@@ -213,22 +283,34 @@
                     <tr>
                         <td>
                             <label for="blindsight-input">
-
+                                Blindsight: 
+                                <br>
+                                <input type="number" id="blindsight-input" min="0" max="995" step="5" value="0">
+                                 ft.
                             </label>
                         </td>
                         <td>
                             <lable for="darkvision-input">
-
+                                Darkvision:
+                                <br>
+                                <input type="number" id="darkvision-input" min="0" max="995" step="5" value="0">
+                                 ft.
                             </lable>
                         </td>
                         <td>
                             <lable for="tremorsense-input">
-
+                                Tremorsense:
+                                <br>
+                                <input type="number" id="tremorsense-input" min="0" max="995" step="5" value="0">
+                                 ft.
                             </lable>
                         </td>
                         <td>
                             <label for="truesite-input">
-
+                                Truesite:
+                                <br>
+                                <input type="number" id="truesite-input" min="0" max="995" step="5" value="0">
+                                 ft.
                             </label>
                         </td>
                     </tr>

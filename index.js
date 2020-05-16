@@ -26,8 +26,17 @@ var monsterData = {
     truesight: 0,
     telepathy: 0,
 
-    hpText: "4 (1d8)"
+    hpText: "4 (1d8)", //screw actually calculating, trust the user to enter in these things correctly
+    acText: "16 (natural armor)"
+
 };
+
+
+
+//gets ability score modifier
+function getMod(score){
+    return Math.floor(score / 2) - 5;
+}
 
 function getAllVariables(){
     //type data
@@ -52,10 +61,10 @@ function getAllVariables(){
     monsterData.tremorsense = $("#tremorsense-input").val();
     monsterData.truesight = $("#truesight-input").val();
 
-    //hp stuff
+    //hp and ac stuff
     monsterData.hpText = $('#hp-input').val();
+    monsterData.acText = $('#ac-input').val();
 }
-
 
 //returns the string to be dislpayed in the speed portion of stat block 
 function getSpeed(){
@@ -91,4 +100,9 @@ function getSenses(){
         sensesArr.push("truesite " + monsterData.truesight + " ft.");
     }
     return sensesArr.join(", ");
+}
+
+
+function generateStatblock(){
+    
 }
