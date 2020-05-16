@@ -76,6 +76,13 @@ function getAllVariables(){
     //hp and ac stuff
     monsterData.hpText = $('#hp-input').val();
     monsterData.acText = $('#ac-input').val();
+
+    //speed
+    monsterData.speed = $('#normal-input').val();
+    monsterData.burrowSpeed = $('#burrow-input').val();
+    monsterData.climbSpeed = $('#climb-input').val();
+    monsterData.flySpeed = $('#fly-input').val();
+    monsterData.swimSpeed = $('#swim-input').val();
 }
 
 //returns the string to be dislpayed in the speed portion of stat block 
