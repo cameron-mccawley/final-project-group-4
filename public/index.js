@@ -83,6 +83,8 @@ function getAllVariables(){
     monsterData.climbSpeed = $('#climb-input').val();
     monsterData.flySpeed = $('#fly-input').val();
     monsterData.swimSpeed = $('#swim-input').val();
+
+    
 }
 
 //returns the string to be dislpayed in the speed portion of stat block 
@@ -137,4 +139,7 @@ function generateStatblock(){
     $('#intpts').html(monsterData.intPoints + " (" + getPlusOrMinus(getMod(monsterData.intPoints)) + ")");
     $('#wispts').html(monsterData.wisPoints + " (" + getPlusOrMinus(getMod(monsterData.wisPoints)) + ")");
     $('#chapts').html(monsterData.chaPoints + " (" + getPlusOrMinus(getMod(monsterData.chaPoints)) + ")");
+    $('#senses').html(getSenses());
+
+    $('#challenge-rating').html(monsterData.cr);
 }
