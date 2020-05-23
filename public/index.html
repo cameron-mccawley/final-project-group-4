@@ -69,6 +69,27 @@
                             <svg height="5" width="100%" class="tapered-rule">
                                 <polyline points="0,0 400,2.5 0,5"></polyline>
                             </svg>
+                            <div id="properties-list">
+                                <div class="property-line first">
+                                    <div>
+                                        <h4>Senses</h4>
+                                        <p id="senses"></p> <!--Senses would go here-->
+                                    </div>
+                                </div>
+                                <div class="property-line">
+                                    <div>
+                                        <h4 id="languages">Languages</h4>
+                                        <p>—</p>
+                                    </div>
+                                </div>
+                                <div class="property-line last">
+                                    <h4>Challenge</h4>
+                                    <p id="challenge-rating"></p>
+                                </div>
+                            </div>
+                            <svg height="5" width="100%" class="tapered-rule">
+                                <polyline points="0,0 400,2.5 0,5"></polyline>
+                            </svg>
                         </div>
                     </div>
                 </div>
@@ -314,6 +335,21 @@
                             </label>
                         </td>
                     </tr>
+                </tbody>
+            </table>
+            <!--cr and possibley languages at some point (not for this assignment though)-->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="cr-input">
+                                Challenge Rating:
+                                <br>
+                                <input type="number" id="cr-input" min="0" max="100" value="1">
+                            </label>
+                        </td>
+                    </tr>
+
                 </tbody>
             </table>
 
