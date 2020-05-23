@@ -83,8 +83,10 @@ function getAllVariables(){
     monsterData.climbSpeed = $('#climb-input').val();
     monsterData.flySpeed = $('#fly-input').val();
     monsterData.swimSpeed = $('#swim-input').val();
-
     
+    //cr
+    monsterData.cr = $('#cr-input').val();
+
 }
 
 //returns the string to be dislpayed in the speed portion of stat block 
