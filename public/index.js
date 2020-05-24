@@ -111,7 +111,7 @@ function getSpeed(){
 function getSenses(){
     let sensesArr = [];
     if(monsterData.blindsight > 0){
-        sensesArr.push("bindsite " + monsterData.blindsight + " ft.");
+        sensesArr.push("blindsite " + monsterData.blindsight + " ft.");
     }
     if(monsterData.darkvision > 0){
         sensesArr.push("darkvision " + monsterData.darkvision + " ft.");
