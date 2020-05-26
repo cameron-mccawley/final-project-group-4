@@ -83,13 +83,13 @@ function getAllVariables(){
     monsterData.climbSpeed = $('#climb-input').val();
     monsterData.flySpeed = $('#fly-input').val();
     monsterData.swimSpeed = $('#swim-input').val();
-    
+
     //cr
     monsterData.cr = $('#cr-input').val();
 
 }
 
-//returns the string to be dislpayed in the speed portion of stat block 
+//returns the string to be dislpayed in the speed portion of stat block
 function getSpeed(){
     let speedArr = [monsterData.speed + " ft."];
     if(monsterData.burrowSpeed > 0){
@@ -132,7 +132,7 @@ function generateStatblock(){
 
     $('#monster-name').html(monsterData.name);
     $('#monster-type').html(monsterData.size + " " + monsterData.type + (monsterData.tag == "" ? ", " : " (" + monsterData.tag + "), ") + monsterData.alignment);
-    $('#armor-class').html(monsterData.acText); //need to format this properly 
+    $('#armor-class').html(monsterData.acText); //need to format this properly
     $('#hit-points').html(monsterData.hpText);
     $('#speed').html(getSpeed());
     $('#strpts').html(monsterData.strPoints + " (" + getPlusOrMinus(getMod(monsterData.strPoints)) + ")");
@@ -145,3 +145,42 @@ function generateStatblock(){
 
     $('#challenge-rating').html(monsterData.cr);
 }
+
+
+
+/*Misc. string formatting funcitons*/
+
+function uppercase_first(some_string){
+  /*some_string.toLowerCase();*/    //Change all to lowercase
+  return some_string.charAt(0).toUpperCase() + some_string.slice(1);
+}
+
+function uppercase_all(some_string){
+  return some_string.toUpperCase;
+}
+
+function lowercase_all(some_string){
+  return some_string.toLowerCase;
+}
+
+function italics(some_string){
+  var temp = some_string.italics();
+  alert(temp.italics());
+  return temp;
+}
+
+function bold(some_string){
+  var temp = some_string.bold();
+  alert(temp.bold());
+  return temp;
+}
+
+/*
+Function to do:
+1.Underline
+2.Revert to normal
+3.??
+4.??
+*/
+
+//Feel free to add to the list above.
