@@ -6,7 +6,7 @@ var port = 8000;
 
 app.use(express.static('public'));
 
-app.get('/index', function(req, res, next){
+app.get('/generator', function(req, res, next){
     res.status(200).sendFile(__dirname + '/public/index.html');
 });
 
