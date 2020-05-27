@@ -4,14 +4,14 @@ var app = express();
 
 var port = 8000;
 
-app.use(express.static('puclic'));
+app.use(express.static('public'));
 
 app.get('/index', function(req, res, next){
     res.status(200).sendFile(__dirname + '/public/index.html');
 });
 
-app.get('/galleryPage/index.html', function(req, res, next){
-    res.status(200).sendFile(__dirname + '/public/galleryPage/index.html');
+app.get('/gallery', function(req, res, next){
+    res.status(200).sendFile(__dirname + '/public/galleryPage/gallery.html');
 });
 
 app.get('*', function(req, res, next){
