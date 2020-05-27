@@ -7,7 +7,7 @@
     width: 400px;
     background: #FDF1DC;
     background-size: cover;
-	background-position: center; 
+	background-position: center;
     background-image: url('images/statblockparch.jpg');
     padding: 10px 10px 20px;
     box-sizing: border-box;
@@ -18,7 +18,7 @@
     display: block;
     background: #E69A28;
     background-size: cover;
-	background-position: center; 
+	background-position: center;
     background-image: url('images/statblockbar.jpg');
     border: 1px solid #000;
     height: 5px;
@@ -153,4 +153,31 @@
 
 #print-block .orange-border {
     display: none;
+}
+
+#nav {
+	background-color: #FDF1DC;
+	margin: 0;
+	padding: 0.5px;
+	background-clip: border-box;
+	background-size: cover;
+	 background-position: center;
+	background-image: url('images/statblockparch.jpg');
+}
+
+.navitem.navlink a{
+	font-size: 25px;
+	color: black;
+	font-family: 'Libre Baskerville', 'Lora', 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif;
+	text-decoration: none;
+}
+
+.navitem.navlink a:hover {
+	color: #922610;
+	text-decoration: underline;
+}
+
+ul.navlist li {
+	display: inline;
+	margin: 5px;
 }

@@ -8,10 +8,15 @@
         <link rel="stylesheet" type="text/css" href="style.css">
     </head>
 
-    <body> 
-        <div id="nav">
+    <body>
+	    <!--navbar-->
+        <nav id="nav">
+		   <ul class="navlist">
+	          <li class="navitem navlink"><a href="#">Stat Block Generator</a></li>
+	          <li class="navitem navlink"><a href="#">Stat Block Gallery</a></li>
+	        </ul>
+        </nav>
 
-        </div>
         <!--stat block start-->
         <div id="stat-block-wrapper">
             <div id="stat-block" class="stat-block">
@@ -106,13 +111,13 @@
                         <td>
                             <label for="name-input">
                                 Name:
-                                <br> 
+                                <br>
                                 <input id="name-input" type="text" value="Monster">
                             </label>
-                        </td>  
+                        </td>
                         <td>
                             <label for="size-input">
-                                Size: 
+                                Size:
                                 <br>
                                 <select id="size-input">
                                     <option value="tiny">Tiny</option>
@@ -126,7 +131,7 @@
                         </td>
                         <td>
                             <label for="type-input">
-                                Type: 
+                                Type:
                                 <br>
                                 <select id="type-input">
                                     <option value="aberration">Aberration</option>
@@ -148,7 +153,7 @@
                         </td>
                         <td>
                             <label for="tag-input">
-                                Tag: 
+                                Tag:
                                 <br>
                                 <input id="tag-input" type="text">
                             </label>
@@ -163,20 +168,20 @@
                     </tr>
                 </tbody>
             </table>
-            
+
             <!--HP-->
             <table id="armor-hp-form">
                 <tr>
                     <td>
                         <label for="hp-input">
-                            Hitpoints: 
+                            Hitpoints:
                             <br>
                             <input id="hp-input" type="text" value="4 (1d8)">
                         </label>
                     </td>
                     <td>
                         <label for="ac-input">
-                            Armor Class: 
+                            Armor Class:
                             <br>
                             <input id="ac-input" type="text" value="16 (natural armor)">
                         </label>
@@ -216,7 +221,7 @@
                             <label for="fly-input">
                                 Fly Speed:
                                 <br>
-                                <input type = "number" id = "fly-input" min = "0" max = "95" step = "5" value = "0"> 
+                                <input type = "number" id = "fly-input" min = "0" max = "95" step = "5" value = "0">
                                 ft.
                             </label>
                         </td>
@@ -237,7 +242,7 @@
                     <tr>
                         <td>
                             <label for="str-score">
-                                STR: 
+                                STR:
                                 <br>
                                 <input type="number" id="str-score" min="1" max="20" value="10" onchange="updateMod('str')">
                                 (
@@ -247,7 +252,7 @@
                         </td>
                         <td>
                             <label for="dex-score">
-                                DEX: 
+                                DEX:
                                 <br>
                                 <input type="number" id="dex-score" min="1" max="20" value="10" onchange="updateMod('dex')">
                                 (
@@ -257,7 +262,7 @@
                         </td>
                         <td>
                             <label for="con-score">
-                                CON: 
+                                CON:
                                 <br>
                                 <input type="number" id="con-score" min="1" max="20" value="10" onchange="updateMod('con')">
                                 (
@@ -267,7 +272,7 @@
                         </td>
                         <td>
                             <label for="int-score">
-                                INT: 
+                                INT:
                                 <br>
                                 <input type="number" id="int-score" min="1" max="20" value="10" onchange="updateMod('int')">
                                 (
@@ -277,7 +282,7 @@
                         </td>
                         <td>
                             <label for="wis-score">
-                                WIS: 
+                                WIS:
                                 <br>
                                 <input type="number" id="wis-score" min="1" max="20" value="10" onchange="updateMod('wis')">
                                 (
@@ -287,7 +292,7 @@
                         </td>
                         <td>
                             <label for="cha-score">
-                                CHA: 
+                                CHA:
                                 <br>
                                 <input type="number" id="cha-score" min="1" max="20" value="10" onchange="updateMod('cha')">
                                 (
@@ -298,14 +303,14 @@
                     </tr>
                 </tbody>
             </table>
-            
+
             <!--Senses-->
             <table id="senses-form">
                 <tbody>
                     <tr>
                         <td>
                             <label for="blindsight-input">
-                                Blindsight: 
+                                Blindsight:
                                 <br>
                                 <input type="number" id="blindsight-input" min="0" max="995" step="5" value="0">
                                  ft.
