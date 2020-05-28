@@ -154,6 +154,14 @@
 #print-block .orange-border {
     display: none;
 }
+button {
+	color:#000000;
+	font-size:12.5px;
+	font-family:'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+	background:#E9950B
+	padding: 1px 6px;
+	width:2px;
+}
 
 #nav {
 	background-color: #FDF1DC;
@@ -180,14 +188,4 @@
 ul.navlist li {
 	display: inline;
 	margin: 5px;
-}
-.type-form {
-    font-family: 'Libre Baskerville', 'Lora', 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif;
-    color: #922610;
-    font-size: 21px;
-    line-height: 1.2em;
-    margin: 10px 0 0;
-    letter-spacing: 1px;
-    font-variant: small-caps;
-    font-weight: bold;
 }
