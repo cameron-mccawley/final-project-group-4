@@ -177,7 +177,7 @@ button:hover {
 	display: inline-block;
 	vertical-align: top;
 	padding: 20px;
-	border: 4px;
+	border: 10px;
 	border-color: black;
 }
 /*.stat-block {
