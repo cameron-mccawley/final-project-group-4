@@ -170,7 +170,9 @@ function generateStatblock(){
     $('#challenge-rating').html(monsterData.cr);
 }
 
-
+function uploadStatBlock(){
+    
+}
 
 /*Misc. string formatting funcitons*/
 
