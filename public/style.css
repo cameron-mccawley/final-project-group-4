@@ -155,14 +155,22 @@
     display: none;
 }
 button {
-	color:#000000;
+	color:#494949 !important;
+	text-transform: uppercase;
 	font-size:12.5px;
 	font-family:'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
 	background:#E69A28;
-	margin: 0 auto;
-	text-align: center;
+	padding 20px;
+	border 5px solid #494949 !important;
+	display: inline block;
+	transition: all 0.5s ease 0s;
 }
-
+button {
+	color: #E69A28 !important;
+	background: #f6b93b;
+	border-color: #f6b93b !important;
+	transition: all 0.5s ease 0s;	
+}
 #nav {
 	background-color: #FDF1DC;
 	margin: 0;
