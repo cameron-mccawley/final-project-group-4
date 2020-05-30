@@ -171,7 +171,7 @@ function generateStatblock(){
 }
 
 function uploadStatBlock(){
-    
+    var jsonString = JSON.stringify(monsterData);
 }
 
 /*Misc. string formatting funcitons*/
