@@ -33,7 +33,6 @@ var monsterData = {
     darkvision: 0,
     tremorsense: 0,
     truesight: 0,
-    telepathy: 0,
 
     sensesString: "",
 
@@ -91,6 +90,7 @@ function getAllVariables(){
     monsterData.blindsight = $("#blindsight-input").val();
     monsterData.darkvision = $("#darkvision-input").val();
     monsterData.tremorsense = $("#tremorsense-input").val();
+    
     monsterData.truesight = $("#truesight-input").val();
 
     monsterData.sensesString = getSenses();
@@ -135,7 +135,7 @@ function getSpeed(){
 function getSenses(){
     let sensesArr = [];
     if(monsterData.blindsight > 0){
-        sensesArr.push("blindsite " + monsterData.blindsight + " ft.");
+        sensesArr.push("blindsight " + monsterData.blindsight + " ft.");
     }
     if(monsterData.darkvision > 0){
         sensesArr.push("darkvision " + monsterData.darkvision + " ft.");
@@ -144,7 +144,7 @@ function getSenses(){
         sensesArr.push("tremorsense " + monsterData.tremorsense + " ft.");
     }
     if(monsterData.truesight > 0){
-        sensesArr.push("truesite " + monsterData.truesight + " ft.");
+        sensesArr.push("truesight " + monsterData.truesight + " ft.");
     }
     return sensesArr.join(", ");
 }
@@ -156,7 +156,7 @@ function generateStatblock(){
 
     $('#monster-name').html(monsterData.name);
     $('#monster-type').html(monsterData.typeString);
-    $('#armor-class').html(monsterData.acText); //need to format this properly
+    $('#armor-class').html(monsterData.acText);
     $('#hit-points').html(monsterData.hpText);
     $('#speed').html(monsterData.speedString);
     $('#strpts').html(monsterData.strPointsS);
@@ -165,6 +165,7 @@ function generateStatblock(){
     $('#intpts').html(monsterData.intPointsS);
     $('#wispts').html(monsterData.wisPointsS);
     $('#chapts').html(monsterData.chaPointsS);
+
     $('#senses').html(monsterData.sensesString);
 
     $('#challenge-rating').html(monsterData.cr);
@@ -172,6 +173,7 @@ function generateStatblock(){
 
 function uploadStatBlock(){
     var jsonString = JSON.stringify(monsterData);
+    console.log(jsonString);
 }
 
 /*Misc. string formatting funcitons*/
