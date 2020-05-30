@@ -165,7 +165,7 @@ button {
 	display: inline block;
 	transition: all 0.5s ease 0s;
 }
-button {
+button:hover {
 	color: #E69A28;
 	background: #f6b93b;
 	border-color: #f6b93b;
