@@ -100,7 +100,9 @@ function getSkills(){
     if($('#survival').prop("checked")){
         skills_arr.push("Survival " + getPlusOrMinus(prof_mod + getMod(monsterData.wisPoints)));
     }
-
+    if(skills_arr.length == 0){
+        return "—";
+    }
      return skills_arr.join(", ");
 }
 
@@ -182,7 +184,11 @@ function getAllVariables(){
 
 //returns passive perception
 function getPP(){
-    return 10 + getMod(monsterData.wisPoints); //TODO: add skill prof
+    let prof = 0;
+    if($('#perception').prop("checked")){
+        prof = 2;
+    }
+    return 10 + getMod(monsterData.wisPoints) + prof; 
 }
 
 //returns the string to be dislpayed in the speed portion of stat block
