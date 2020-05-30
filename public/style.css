@@ -171,6 +171,27 @@ button:hover {
 	border-color: #f6b93b;
 	transition: all 0.5s ease 0s;	
 }
+.type-form{
+	text-align:left;
+	font-size: 21.5px;
+	display: inline-block;
+	vertical-align: middle;
+}
+/*.stat-block {
+    text-align: left;
+    font-size: 12.5px;
+    line-height: 1.2em;
+    display: inline-block;
+    vertical-align: top;
+    width: 400px;
+    background: #FDF1DC;
+    background-size: cover;
+	background-position: center;
+    background-image: url('images/statblockparch.jpg');
+    padding: 10px 10px 20px;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+}*/
 #nav {
 	background-color: #FDF1DC;
 	margin: 0;
