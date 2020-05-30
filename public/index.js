@@ -20,6 +20,13 @@ var monsterData = {
     wisPoints: 10,
     chaPoints: 10,
 
+    strPointsS: "",
+    dexPointsS: "",
+    conPointsS: "",
+    intPointsS: "",
+    wisPointsS: "",
+    chaPointsS: "",
+
     cr: 1,
 
     blindsight: 0,
@@ -61,6 +68,7 @@ function getAllVariables(){
     monsterData.type = $('#type-input').val();
     monsterData.tag = $('#tag-input').val().trim();
     monsterData.alignment = $('#alignment-input').val().trim();
+    monsterData.typeString = (monsterData.size + " " + monsterData.type + (monsterData.tag == "" ? ", " : " (" + monsterData.tag + "), ") + monsterData.alignment);
 
 
     //stats
@@ -71,11 +79,21 @@ function getAllVariables(){
     monsterData.wisPoints = $("#wis-score").val();
     monsterData.chaPoints = $("#cha-score").val();
 
+    monsterData.strPointsS = (monsterData.strPoints + " (" + getPlusOrMinus(getMod(monsterData.strPoints)) + ")");
+    monsterData.dexPointsS = (monsterData.dexPoints + " (" + getPlusOrMinus(getMod(monsterData.dexPoints)) + ")");
+    monsterData.conPointsS = (monsterData.conPoints + " (" + getPlusOrMinus(getMod(monsterData.conPoints)) + ")");
+    monsterData.intPointsS = (monsterData.intPoints + " (" + getPlusOrMinus(getMod(monsterData.intPoints)) + ")");
+    monsterData.wisPointsS = (monsterData.wisPoints + " (" + getPlusOrMinus(getMod(monsterData.wisPoints)) + ")");
+    monsterData.chaPointsS = (monsterData.chaPoints + " (" + getPlusOrMinus(getMod(monsterData.chaPoints)) + ")");
+    
+
     //senses
     monsterData.blindsight = $("#blindsight-input").val();
     monsterData.darkvision = $("#darkvision-input").val();
     monsterData.tremorsense = $("#tremorsense-input").val();
     monsterData.truesight = $("#truesight-input").val();
+
+    monsterData.sensesString = getSenses();
 
     //hp and ac stuff
     monsterData.hpText = $('#hp-input').val();
@@ -87,6 +105,8 @@ function getAllVariables(){
     monsterData.climbSpeed = $('#climb-input').val();
     monsterData.flySpeed = $('#fly-input').val();
     monsterData.swimSpeed = $('#swim-input').val();
+
+    monsterData.speedString = getSpeed();
 
     //cr
     monsterData.cr = $('#cr-input').val();
@@ -135,17 +155,17 @@ function generateStatblock(){
     let statBlock = $('#stat-block');
 
     $('#monster-name').html(monsterData.name);
-    $('#monster-type').html(monsterData.size + " " + monsterData.type + (monsterData.tag == "" ? ", " : " (" + monsterData.tag + "), ") + monsterData.alignment);
+    $('#monster-type').html(monsterData.typeString);
     $('#armor-class').html(monsterData.acText); //need to format this properly
     $('#hit-points').html(monsterData.hpText);
-    $('#speed').html(getSpeed());
-    $('#strpts').html(monsterData.strPoints + " (" + getPlusOrMinus(getMod(monsterData.strPoints)) + ")");
-    $('#dexpts').html(monsterData.dexPoints + " (" + getPlusOrMinus(getMod(monsterData.dexPoints)) + ")");
-    $('#conpts').html(monsterData.conPoints + " (" + getPlusOrMinus(getMod(monsterData.conPoints)) + ")");
-    $('#intpts').html(monsterData.intPoints + " (" + getPlusOrMinus(getMod(monsterData.intPoints)) + ")");
-    $('#wispts').html(monsterData.wisPoints + " (" + getPlusOrMinus(getMod(monsterData.wisPoints)) + ")");
-    $('#chapts').html(monsterData.chaPoints + " (" + getPlusOrMinus(getMod(monsterData.chaPoints)) + ")");
-    $('#senses').html(getSenses());
+    $('#speed').html(monsterData.speedString);
+    $('#strpts').html(monsterData.strPointsS);
+    $('#dexpts').html(monsterData.dexPointsS);
+    $('#conpts').html(monsterData.conPointsS);
+    $('#intpts').html(monsterData.intPointsS);
+    $('#wispts').html(monsterData.wisPointsS);
+    $('#chapts').html(monsterData.chaPointsS);
+    $('#senses').html(monsterData.sensesString);
 
     $('#challenge-rating').html(monsterData.cr);
 }
