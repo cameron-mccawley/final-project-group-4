@@ -4,12 +4,14 @@ var monsterData = {
     type: "humanoid",
     tag: "",
     alignment: "neutral",
+    typeString: "",
 
     speed: 30,
     burrowSpeed: 0,
     climbSpeed: 0,
     flySpeed: 0,
     swimSpeed: 0,
+    speedString: "",
 
     strPoints: 10,
     dexPoints: 10,
@@ -25,6 +27,8 @@ var monsterData = {
     tremorsense: 0,
     truesight: 0,
     telepathy: 0,
+
+    sensesString: "",
 
     hpText: "4 (1d8)", //screw actually calculating, trust the user to enter in these things correctly
     acText: "16 (natural armor)"
