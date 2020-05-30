@@ -176,6 +176,9 @@ button:hover {
 	font-size: 21.5px;
 	display: inline-block;
 	vertical-align: top;
+	padding: 20px;
+	border: 4px;
+	border-color: black;
 }
 /*.stat-block {
     text-align: left;
