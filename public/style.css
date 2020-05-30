@@ -175,7 +175,7 @@ button:hover {
 	text-align:left;
 	font-size: 21.5px;
 	display: inline-block;
-	vertical-align: middle;
+	vertical-align: top;
 }
 /*.stat-block {
     text-align: left;
