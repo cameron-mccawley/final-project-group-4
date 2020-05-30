@@ -38,7 +38,9 @@ var monsterData = {
     sensesString: "",
 
     hpText: "4 (1d8)", //screw actually calculating, trust the user to enter in these things correctly
-    acText: "16 (natural armor)"
+    acText: "16 (natural armor)",
+
+    
 
 };
 
