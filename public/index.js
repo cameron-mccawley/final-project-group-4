@@ -40,9 +40,69 @@ var monsterData = {
     hpText: "4 (1d8)", //screw actually calculating, trust the user to enter in these things correctly
     acText: "16 (natural armor)",
 
-    
-
+    skillsString: ""
 };
+
+function getSkills(){
+    let skills_arr = [];
+    let prof_mod = 2;
+    if($('#acrobatics').prop("checked")){
+        skills_arr.push("Acrobatics " + getPlusOrMinus(prof_mod + getMod(monsterData.dexPoints)));
+    }
+    if($('#animal-handling').prop("checked")){
+        skills_arr.push("Animal Handling " + getPlusOrMinus(prof_mod + getMod(monsterData.wisPoints)));
+    }
+    if($('#arcana').prop("checked")){
+        skills_arr.push("Arcana " + getPlusOrMinus(prof_mod + getMod(monsterData.intPoints)));
+    }
+    if($('#athletics').prop("checked")){
+        skills_arr.push("Athletics " + getPlusOrMinus(prof_mod + getMod(monsterData.strPoints)));
+    }
+    if($('#deception').prop("checked")){
+        skills_arr.push("deception " + getPlusOrMinus(prof_mod + getMod(monsterData.chaPoints)));
+    }
+    if($('#history').prop("checked")){
+        skills_arr.push("History " + getPlusOrMinus(prof_mod + getMod(monsterData.intPoints)));
+    }
+    if($('#insight').prop("checked")){
+        skills_arr.push("Insight " + getPlusOrMinus(prof_mod + getMod(monsterData.wisPoints)));
+    }
+    if($('#intimidation').prop("checked")){
+        skills_arr.push("Intimidation " + getPlusOrMinus(prof_mod + getMod(monsterData.chaPoints)));
+    }
+    if($('#investigation').prop("checked")){
+        skills_arr.push("Investigation " + getPlusOrMinus(prof_mod + getMod(monsterData.intPoints)));
+    }
+    if($('#medicine').prop("checked")){
+        skills_arr.push("Medicine " + getPlusOrMinus(prof_mod + getMod(monsterData.wisPoints)));
+    }
+    if($('#nature').prop("checked")){
+        skills_arr.push("Nature " + getPlusOrMinus(prof_mod + getMod(monsterData.intPoints)));
+    }
+    if($('#perception').prop("checked")){
+        skills_arr.push("Perception " + getPlusOrMinus(prof_mod + getMod(monsterData.wisPoints)));
+    }
+    if($('#performance').prop("checked")){
+        skills_arr.push("Performance " + getPlusOrMinus(prof_mod + getMod(monsterData.chaPoints)));
+    }
+    if($('#persuasion').prop("checked")){
+        skills_arr.push("Persuasion " + getPlusOrMinus(prof_mod + getMod(monsterData.chaPoints)));
+    }
+    if($('#religion').prop("checked")){
+        skills_arr.push("Religion " + getPlusOrMinus(prof_mod + getMod(monsterData.intPoints)));
+    }
+    if($('#sleight-of-hand').prop("checked")){
+        skills_arr.push("Sleight of Hand " + getPlusOrMinus(prof_mod + getMod(monsterData.dexPoints)));
+    }
+    if($('#stealth').prop("checked")){
+        skills_arr.push("Stealth " + getPlusOrMinus(prof_mod + getMod(monsterData.dexPoints)));
+    }
+    if($('#survival').prop("checked")){
+        skills_arr.push("Survival " + getPlusOrMinus(prof_mod + getMod(monsterData.wisPoints)));
+    }
+
+     return skills_arr.join(", ");
+}
 
 
 
@@ -115,6 +175,9 @@ function getAllVariables(){
     //cr
     monsterData.cr = $('#cr-input').val();
 
+    //skills
+    monsterData.skillsString = getSkills();
+
 }
 
 //returns passive perception
@@ -175,6 +238,8 @@ function generateStatblock(){
     $('#intpts').html(monsterData.intPointsS);
     $('#wispts').html(monsterData.wisPointsS);
     $('#chapts').html(monsterData.chaPointsS);
+
+    $('#skills').html(monsterData.skillsString);
 
     $('#senses').html(monsterData.sensesString);
 
