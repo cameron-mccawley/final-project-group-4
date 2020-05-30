@@ -40,5 +40,48 @@
     "hpText": "4 (1d8)",
     "acText": "16 (natural armor)"
 
+},
+{
+    "name": "Tabitha",
+    "size": "small",
+    "type": "foot gremilin",
+    "tag": "",
+    "alignment": "neutral",
+    "typeString": "",
+
+    "speed": 30,
+    "burrowSpeed": 0,
+    "climbSpeed": 20,
+    "flySpeed": 0,
+    "swimSpeed": 0,
+    "speedString": "",
+
+    "strPoints": 10,
+    "dexPoints": 10,
+    "conPoints": 10,
+    "intPoints": 10,
+    "wisPoints": 10,
+    "chaPoints": 10,
+
+    "strPointsS": "13 (+1)",
+    "dexPointsS": "",
+    "conPointsS": "",
+    "intPointsS": "",
+    "wisPointsS": "",
+    "chaPointsS": "",
+
+    "cr": 1,
+
+    "blindsight": 0,
+    "darkvision": 0,
+    "tremorsens": 0,
+    "truesight": 0,
+    "telepathy": 0,
+
+    "sensesString": "",
+
+    "hpText": "4 (1d8)",
+    "acText": "16 (natural armor)"
+
 }
 ]
