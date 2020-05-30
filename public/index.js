@@ -29,6 +29,7 @@ var monsterData = {
 
     cr: 1,
 
+    passivePerception: 0,
     blindsight: 0,
     darkvision: 0,
     tremorsense: 0,
@@ -37,9 +38,71 @@ var monsterData = {
     sensesString: "",
 
     hpText: "4 (1d8)", //screw actually calculating, trust the user to enter in these things correctly
-    acText: "16 (natural armor)"
+    acText: "16 (natural armor)",
 
+    skillsString: ""
 };
+
+function getSkills(){
+    let skills_arr = [];
+    let prof_mod = 2;
+    if($('#acrobatics').prop("checked")){
+        skills_arr.push("Acrobatics " + getPlusOrMinus(prof_mod + getMod(monsterData.dexPoints)));
+    }
+    if($('#animal-handling').prop("checked")){
+        skills_arr.push("Animal Handling " + getPlusOrMinus(prof_mod + getMod(monsterData.wisPoints)));
+    }
+    if($('#arcana').prop("checked")){
+        skills_arr.push("Arcana " + getPlusOrMinus(prof_mod + getMod(monsterData.intPoints)));
+    }
+    if($('#athletics').prop("checked")){
+        skills_arr.push("Athletics " + getPlusOrMinus(prof_mod + getMod(monsterData.strPoints)));
+    }
+    if($('#deception').prop("checked")){
+        skills_arr.push("deception " + getPlusOrMinus(prof_mod + getMod(monsterData.chaPoints)));
+    }
+    if($('#history').prop("checked")){
+        skills_arr.push("History " + getPlusOrMinus(prof_mod + getMod(monsterData.intPoints)));
+    }
+    if($('#insight').prop("checked")){
+        skills_arr.push("Insight " + getPlusOrMinus(prof_mod + getMod(monsterData.wisPoints)));
+    }
+    if($('#intimidation').prop("checked")){
+        skills_arr.push("Intimidation " + getPlusOrMinus(prof_mod + getMod(monsterData.chaPoints)));
+    }
+    if($('#investigation').prop("checked")){
+        skills_arr.push("Investigation " + getPlusOrMinus(prof_mod + getMod(monsterData.intPoints)));
+    }
+    if($('#medicine').prop("checked")){
+        skills_arr.push("Medicine " + getPlusOrMinus(prof_mod + getMod(monsterData.wisPoints)));
+    }
+    if($('#nature').prop("checked")){
+        skills_arr.push("Nature " + getPlusOrMinus(prof_mod + getMod(monsterData.intPoints)));
+    }
+    if($('#perception').prop("checked")){
+        skills_arr.push("Perception " + getPlusOrMinus(prof_mod + getMod(monsterData.wisPoints)));
+    }
+    if($('#performance').prop("checked")){
+        skills_arr.push("Performance " + getPlusOrMinus(prof_mod + getMod(monsterData.chaPoints)));
+    }
+    if($('#persuasion').prop("checked")){
+        skills_arr.push("Persuasion " + getPlusOrMinus(prof_mod + getMod(monsterData.chaPoints)));
+    }
+    if($('#religion').prop("checked")){
+        skills_arr.push("Religion " + getPlusOrMinus(prof_mod + getMod(monsterData.intPoints)));
+    }
+    if($('#sleight-of-hand').prop("checked")){
+        skills_arr.push("Sleight of Hand " + getPlusOrMinus(prof_mod + getMod(monsterData.dexPoints)));
+    }
+    if($('#stealth').prop("checked")){
+        skills_arr.push("Stealth " + getPlusOrMinus(prof_mod + getMod(monsterData.dexPoints)));
+    }
+    if($('#survival').prop("checked")){
+        skills_arr.push("Survival " + getPlusOrMinus(prof_mod + getMod(monsterData.wisPoints)));
+    }
+
+     return skills_arr.join(", ");
+}
 
 
 
@@ -90,10 +153,11 @@ function getAllVariables(){
     monsterData.blindsight = $("#blindsight-input").val();
     monsterData.darkvision = $("#darkvision-input").val();
     monsterData.tremorsense = $("#tremorsense-input").val();
-    
-    monsterData.truesight = $("#truesight-input").val();
 
+    monsterData.truesight = $("#truesight-input").val();
+    monsterData.passivePerception = getPP();
     monsterData.sensesString = getSenses();
+    
 
     //hp and ac stuff
     monsterData.hpText = $('#hp-input').val();
@@ -111,6 +175,14 @@ function getAllVariables(){
     //cr
     monsterData.cr = $('#cr-input').val();
 
+    //skills
+    monsterData.skillsString = getSkills();
+
+}
+
+//returns passive perception
+function getPP(){
+    return 10 + getMod(monsterData.wisPoints); //TODO: add skill prof
 }
 
 //returns the string to be dislpayed in the speed portion of stat block
@@ -146,6 +218,7 @@ function getSenses(){
     if(monsterData.truesight > 0){
         sensesArr.push("truesight " + monsterData.truesight + " ft.");
     }
+    sensesArr.push("passive Perception " + monsterData.passivePerception);
     return sensesArr.join(", ");
 }
 
@@ -165,6 +238,8 @@ function generateStatblock(){
     $('#intpts').html(monsterData.intPointsS);
     $('#wispts').html(monsterData.wisPointsS);
     $('#chapts').html(monsterData.chaPointsS);
+
+    $('#skills').html(monsterData.skillsString);
 
     $('#senses').html(monsterData.sensesString);
 
@@ -203,12 +278,4 @@ function bold(some_string){
   return temp;
 }
 
-/*
-Function to do:
-1.Underline
-2.Revert to normal
-3.??
-4.??
-*/
 
-//Feel free to add to the list above.
