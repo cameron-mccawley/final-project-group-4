@@ -29,6 +29,7 @@ var monsterData = {
 
     cr: 1,
 
+    passivePerception: 0,
     blindsight: 0,
     darkvision: 0,
     tremorsense: 0,
@@ -90,10 +91,11 @@ function getAllVariables(){
     monsterData.blindsight = $("#blindsight-input").val();
     monsterData.darkvision = $("#darkvision-input").val();
     monsterData.tremorsense = $("#tremorsense-input").val();
-    
-    monsterData.truesight = $("#truesight-input").val();
 
+    monsterData.truesight = $("#truesight-input").val();
+    monsterData.passivePerception = getPP();
     monsterData.sensesString = getSenses();
+    
 
     //hp and ac stuff
     monsterData.hpText = $('#hp-input').val();
@@ -111,6 +113,11 @@ function getAllVariables(){
     //cr
     monsterData.cr = $('#cr-input').val();
 
+}
+
+//returns passive perception
+function getPP(){
+    return 10 + getMod(monsterData.wisPoints); //TODO: add skill prof
 }
 
 //returns the string to be dislpayed in the speed portion of stat block
@@ -146,6 +153,7 @@ function getSenses(){
     if(monsterData.truesight > 0){
         sensesArr.push("truesight " + monsterData.truesight + " ft.");
     }
+    sensesArr.push("passive Perception " + monsterData.passivePerception);
     return sensesArr.join(", ");
 }
 
@@ -203,12 +211,4 @@ function bold(some_string){
   return temp;
 }
 
-/*
-Function to do:
-1.Underline
-2.Revert to normal
-3.??
-4.??
-*/
 
-//Feel free to add to the list above.
