@@ -172,7 +172,7 @@ button:hover {
 	transition: all 0.5s ease 0s;	
 }
 .type-form{
-	text-align:left;
+	text-align:center;
 	font-size: 21.5px;
 	display: inline-block;
 	vertical-align: top;
