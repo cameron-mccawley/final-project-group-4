@@ -180,6 +180,14 @@ button:hover {
 	border: 10px;
 	border-color: black;
 }
+hr {
+	border-top: 1px solid;
+	border-style: solid;
+	border-color: black;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	
+}
 /*.stat-block {
     text-align: left;
     font-size: 12.5px;
