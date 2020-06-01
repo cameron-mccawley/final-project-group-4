@@ -173,8 +173,13 @@ button:hover {
 }
 input{
 	box-sizing: border-box;
-	display:block;
+	/*display:block;*/
 	text-align: center;
+}
+tr{ 
+	box-sizing: border-box;
+	text-align: center;
+	
 }
 .type-form{
 	margin: 0 auto;
