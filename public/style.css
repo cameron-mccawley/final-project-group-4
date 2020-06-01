@@ -171,8 +171,12 @@ button:hover {
 	border-color: #f6b93b;
 	transition: all 0.5s ease 0s;	
 }
+.input{
+	box-sizing: border-box;
+	display:block;
+	text-align: center;
+}
 .type-form{
-	text-align:center;
 	font-size: 21.5px;
 	display: inline-block;
 	vertical-align: top;
