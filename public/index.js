@@ -252,6 +252,8 @@ function generateStatblock(){
     $('#challenge-rating').html(monsterData.cr);
 }
 
+//TODO: This will need to to a POST request to server
+//We should also pop up an alert or something when we were able to succesfully upload
 function uploadStatBlock(){
     var jsonString = JSON.stringify(monsterData);
     console.log(jsonString);
