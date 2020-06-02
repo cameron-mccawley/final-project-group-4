@@ -104,7 +104,8 @@
         <!--stat block end-->
         <div id="input">
             <button type="button" onclick="generateStatblock()">Generate Statblock</button>
-            <!--Type-->
+	    <hr>
+            Traits:
             <table id="type-form">
                 <tbody>
                     <tr>
@@ -155,7 +156,7 @@
                             <label for="tag-input">
                                 Tag:
                                 <br>
-                                <input id="tag-input" type="text">
+                                <input id="tag-input" type="text" value="Any">
                             </label>
                         </td>
                         <td>
@@ -168,8 +169,8 @@
                     </tr>
                 </tbody>
             </table>
-
-            <!--HP-->
+		<hr>
+            Fortitude:
             <table id="armor-hp-form">
                 <tr>
                     <td>
@@ -188,14 +189,14 @@
                     </td>
                 </tr>
             </table>
-
-            <!--Speed-->
+		<hr>
+            Speed:
             <table id="speed-form">
                 <tbody>
                     <tr>
                         <td id="normal-speed" style>
                             <label for="normal-input">
-                                Speed:
+                                Normal:
                                 <br>
                                 <input type = "number" id = "normal-input" min = "0" max = "95" step = "5"value = "30">
                                 ft.
@@ -203,7 +204,7 @@
                         </td>
                         <td id="burrow-speed" style>
                             <label for="burrow-input">
-                                Burrow Speed:
+                                Burrow:
                                 <br>
                                 <input type = "number" id = "burrow-input" min = "0" max = "95" step = "5" value = "0">
                                 ft.
@@ -211,7 +212,7 @@
                         </td>
                         <td id="climb-speed" style>
                             <label for="climb-input">
-                                Climb Speed:
+                                Climb:
                                 <br>
                                 <input type = "number" id = "climb-input" min = "0" max = "95" step = "5" value = "0">
                                 ft.
@@ -219,7 +220,7 @@
                         </td>
                         <td id="fly-speed" style>
                             <label for="fly-input">
-                                Fly Speed:
+                                Fly:
                                 <br>
                                 <input type = "number" id = "fly-input" min = "0" max = "95" step = "5" value = "0">
                                 ft.
@@ -227,7 +228,7 @@
                         </td>
                         <td id="swim-speed" style>
                             <label for="swim-input">
-                                Swim Speed:
+                                Swim:
                                 <br>
                                 <input type = "number" id = "swim-input" min = "0" max = "95" step = "5"value = "0">
                                 ft.
@@ -236,7 +237,8 @@
                     </tr>
                 </tbody>
           </table>
-          <!--Stats-->
+	  <hr>
+          Attributes:
           <table id="stats-form">
                 <tbody>
                     <tr>
@@ -303,8 +305,8 @@
                     </tr>
                 </tbody>
             </table>
-
-            <!--Senses-->
+		<hr>
+            Senses:
             <table id="senses-form">
                 <tbody>
                     <tr>
@@ -330,7 +332,7 @@
                                 <br>
                                 <input type="number" id="tremorsense-input" min="0" max="995" step="5" value="0">
                                  ft.
-                            </lable>
+                            </label>
                         </td>
                         <td>
                             <label for="truesite-input">
@@ -343,6 +345,8 @@
                     </tr>
                 </tbody>
             </table>
+	    <hr>
+	    Roleplay:
             <!--cr and possibley languages at some point (not for this assignment though)-->
             <table>
                 <tbody>

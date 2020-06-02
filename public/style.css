@@ -154,7 +154,67 @@
 #print-block .orange-border {
     display: none;
 }
-
+button {
+	color:#494949;
+	text-transform: uppercase;
+	font-size:12.5px;
+	font-family:'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+	background:#f6b93b;
+	padding 20px;
+	border 5px solid #494949;
+	display: inline block;
+	transition: all 0.5s ease 0s;
+}
+button:hover {
+	color: #E69A28;
+	background: #f6b93b;
+	border-color: #f6b93b;
+	transition: all 0.5s ease 0s;	
+}
+input{
+	box-sizing: border-box;
+	/*display:block;*/
+	text-align: center;
+}
+tr{ 
+	box-sizing: border-box;
+	display: inline-block;
+	
+}
+.type-form{
+	margin: 0 auto;
+	font-size: 21.5px;
+	display: inline-block;
+	vertical-align: top;
+	padding: 20px;
+	border: 10px;
+	border-color: black;
+}
+hr {
+	overflow: visible;
+	box-sizing: content-box;
+	border-top: 1px solid;
+	border-style: solid;
+	border-color: black;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	
+}
+/*.stat-block {
+    text-align: left;
+    font-size: 12.5px;
+    line-height: 1.2em;
+    display: inline-block;
+    vertical-align: top;
+    width: 400px;
+    background: #FDF1DC;
+    background-size: cover;
+	background-position: center;
+    background-image: url('images/statblockparch.jpg');
+    padding: 10px 10px 20px;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+}*/
 #nav {
 	background-color: #FDF1DC;
 	margin: 0;
