@@ -1,111 +1,12 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Dungeon Dictionary</title>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="index.js"></script>
-        <link rel="stylesheet" type="text/css" href="style.css">
-    </head>
-
-    <body>
-	    <!--navbar-->
-        <nav id="nav">
-		   <ul class="navlist">
-	          <li class="navitem navlink"><a href="#">Stat Block Generator</a></li>
-	          <li class="navitem navlink"><a href="#">Stat Block Gallery</a></li>
-	        </ul>
-        </nav>
-
-        <!--stat block start-->
-        <div id="stat-block-wrapper">
-            <div id="stat-block" class="stat-block">
-                <hr class="orange-border" />
-                    <div class="section-left">
-                        <div class="creature-heading">
-                            <h1 id="monster-name">Monster</h1>
-                            <h2 id="monster-type">Size, type, alignment</h2>
-                        </div> <!-- creature heading -->
-                        <svg height="5" width="100%" class="tapered-rule">
-                            <polyline points="0,0 400,2.5 0,5"></polyline>
-                        </svg>
-                        <div class="top-stats">
-                            <div class="property-line first">
-                                <h4>Armor Class</h4>
-                                <p id="armor-class"></p>
-                            </div> <!-- property line -->
-                            <div class="property-line">
-                                <h4>Hit Points</h4>
-                                <p id="hit-points"></p>
-                            </div> <!-- property line -->
-                            <div class="property-line last">
-                                <h4>Speed</h4>
-                                <p id="speed"></p>
-                            </div> <!-- property line -->
-                            <svg height="5" width="100%" class="tapered-rule">
-                                <polyline points="0,0 400,2.5 0,5"></polyline>
-                            </svg>
-                            <div class="scores">
-                                <div class="scores-strength">
-                                    <h4>STR</h4>
-                                    <p id="strpts"></p>
-                                </div> <!-- scores strength -->
-                                <div class="scores-dexterity">
-                                    <h4>DEX</h4>
-                                    <p id="dexpts"></p>
-                                </div> <!-- scores dexterity -->
-                                <div class="scores-constitution">
-                                    <h4>CON</h4>
-                                    <p id="conpts"></p>
-                                </div> <!-- scores constitution -->
-                                <div class="scores-intelligence">
-                                    <h4>INT</h4>
-                                    <p id="intpts"></p>
-                                </div> <!-- scores intelligence -->
-                                <div class="scores-wisdom">
-                                    <h4>WIS</h4>
-                                    <p id="wispts"></p>
-                                </div> <!-- scores wisdom -->
-                                <div class="scores-charisma">
-                                    <h4>CHA</h4>
-                                    <p id="chapts"></p>
-                                </div> <!-- scores charisma -->
-                            </div> <!-- scores -->
-                            <svg height="5" width="100%" class="tapered-rule">
-                                <polyline points="0,0 400,2.5 0,5"></polyline>
-                            </svg>
-                            <div id="properties-list">
-                                <div class="property-line first">
-                                    <div>
-                                        <h4>Senses</h4>
-                                        <p id="senses"></p> <!--Senses would go here-->
-                                    </div>
-                                </div>
-                                <div class="property-line">
-                                    <div>
-                                        <h4 id="languages">Languages</h4>
-                                        <p>—</p>
-                                    </div>
-                                </div>
-                                <div class="property-line last">
-                                    <h4>Challenge</h4>
-                                    <p id="challenge-rating"></p>
-                                </div>
-                            </div>
-                            <svg height="5" width="100%" class="tapered-rule">
-                                <polyline points="0,0 400,2.5 0,5"></polyline>
-                            </svg>
-                        </div>
-                    </div>
-                    <hr class="orange-border bottom" />
-                </div>
-            </div>
-        </div>
-        <!--stat block end-->
-        <div id="input">
+<div id="input">
             <button type="button" onclick="generateStatblock()">Generate Statblock</button>
+<<<<<<< HEAD:public/index.html
 	    <hr>
             Traits:
+=======
+            <button type="button" onclick="uploadStatBlock()">Upload Statblock</button>
+            <!--Type-->
+>>>>>>> 1db9150a489fee236804a814d81d4a05d8342116:views/partials/formInput.handlebars
             <table id="type-form">
                 <tbody>
                     <tr>
@@ -335,18 +236,173 @@
                             </label>
                         </td>
                         <td>
-                            <label for="truesite-input">
-                                Truesite:
+                            <label for="truesight-input">
+                                Truesight:
                                 <br>
-                                <input type="number" id="truesite-input" min="0" max="995" step="5" value="0">
+                                <input type="number" id="truesight-input" min="0" max="995" step="5" value="0">
                                  ft.
                             </label>
                         </td>
                     </tr>
                 </tbody>
             </table>
+<<<<<<< HEAD:public/index.html
 	    <hr>
 	    Roleplay:
+=======
+            <!--skills -->
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <label for="acrobatics">
+                                Acrobatics: 
+                                <br>
+                                <input type="checkbox" id="acrobatics">
+                                 
+                            </label>
+                        </td>
+                        <td>
+                            <label for="animal-handling">
+                                Animal Handling: 
+                                <br>
+                                <input type="checkbox" id="animal-handling">
+                                 
+                            </label>
+                        </td>
+                        <td>
+                            <label for="arcana">
+                                Arcana: 
+                                <br>
+                                <input type="checkbox" id="arcana">
+                                 
+                            </label>
+                        </td>
+                        <td>
+                            <label for="athletics">
+                                Athletics: 
+                                <br>
+                                <input type="checkbox" id="athletics">
+                                 
+                            </label>
+                        </td>
+                        <td>
+                            <label for="deception">
+                                Deception: 
+                                <br>
+                                <input type="checkbox" id="deception">
+                                 
+                            </label>
+                        </td>
+                        <td>
+                            <label for="history">
+                                History: 
+                                <br>
+                                <input type="checkbox" id="history">
+                                 
+                            </label>
+                        </td>
+                        <td>
+                            <label for="insight">
+                                Insight: 
+                                <br>
+                                <input type="checkbox" id="insight">
+                                 
+                            </label>
+                        </td>
+                        <td>
+                            <label for="intimidation">
+                                Intimidation: 
+                                <br>
+                                <input type="checkbox" id="intimidation">
+                                 
+                            </label>
+                        </td>
+                        <td>
+                            <label for="investigation">
+                                Investigation: 
+                                <br>
+                                <input type="checkbox" id="investigation">
+                            </label>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label for="medicine">
+                                Medicine: 
+                                <br>
+                                <input type="checkbox" id="medicine">
+                                 
+                            </label>
+                        </td>
+                        <td>
+                            <label for="nature">
+                                Nature: 
+                                <br>
+                                <input type="checkbox" id="nature">
+                                 
+                            </label>
+                        </td>
+                        <td>
+                            <label for="perception">
+                                Perception: 
+                                <br>
+                                <input type="checkbox" id="perception">
+                                 
+                            </label>
+                        </td>
+                        <td>
+                            <label for="performance">
+                                Performance: 
+                                <br>
+                                <input type="checkbox" id="performance">
+                                 
+                            </label>
+                        </td>
+                        <td>
+                            <label for="persuasion">
+                                Persuasion: 
+                                <br>
+                                <input type="checkbox" id="persuasion">
+                                 
+                            </label>
+                        </td>
+                        <td>
+                            <label for="religion">
+                                Religion:
+                                <br> 
+                                <input type="checkbox" id="religion">
+                                 
+                            </label>
+                        </td>
+                        <td>
+                            <label for="sleight-of-hand">
+                                Sleight of Hand: 
+                                <br>
+                                <input type="checkbox" id="sleight-of-hand">
+                                 
+                            </label>
+                        </td>
+                        <td>
+                            <label for="stealth">
+                                Stealth: 
+                                <br>
+                                <input type="checkbox" id="stealth">
+                                 
+                            </label>
+                        </td>
+                        <td>
+                            <label for="survival">
+                                Survival: 
+                                <br>
+                                <input type="checkbox" id="survival">
+                            </label>
+                        </td>
+                    </tr>
+                    
+                </tbody>
+            </table>
+>>>>>>> 1db9150a489fee236804a814d81d4a05d8342116:views/partials/formInput.handlebars
             <!--cr and possibley languages at some point (not for this assignment though)-->
             <table>
                 <tbody>
@@ -364,10 +420,3 @@
             </table>
 
         </div>
-
-        <footer>
-
-        </footer>
-
-    </body>
-</html>
