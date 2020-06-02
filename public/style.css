@@ -165,13 +165,12 @@ button {
 	font-size:12.5px;
 	font-family:'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
 	background:#f6b93b;
-	padding: 20px;
+	padding: 5px;
 	border: 5px solid #494949;
 	display: inline block;
 	transition: all 0.5s ease 0s;
 }
 button:hover {
-	color: #E69A28;
 	background: #f6b93b;
 	border-color: #f6b93b;
 	transition: all 0.5s ease 0s;	
@@ -179,7 +178,7 @@ button:hover {
 input{
 	box-sizing: border-box;
 	/*display:block;*/
-	text-align: center;
+	text-align: left;
 }
 tr{ 
 	box-sizing: border-box;
@@ -248,7 +247,7 @@ ul.navlist li {
 	margin: 5px;
 }
 
-#header {
+.title {
 	margin: 0;
 	padding: 0.001em;
 	text-align: center;
