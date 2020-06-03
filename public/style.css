@@ -173,17 +173,17 @@ button {
 button:hover {
 	background: #f6b93b;
 	border-color: #f6b93b;
-	transition: all 0.5s ease 0s;	
+	transition: all 0.5s ease 0s;
 }
 input{
 	box-sizing: border-box;
 	/*display:block;*/
 	text-align: left;
 }
-tr{ 
+tr{
 	box-sizing: border-box;
 	display: inline-block;
-	
+
 }
 .type-form{
 	margin: 0 auto;
@@ -202,7 +202,7 @@ hr {
 	border-color: black;
 	margin-top: 15px;
 	margin-bottom: 15px;
-	
+
 }
 /*.stat-block {
     text-align: left;
@@ -249,8 +249,9 @@ ul.navlist li {
 
 .title {
 	margin: 0;
-	padding: 0.001em;
+	padding: 10px;
 	text-align: center;
+	font-size: 35px;
 	font-family: 'Libre Baskerville', 'Lora', 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif;
 	color: #e63b19;
 	background-color: #262626;
