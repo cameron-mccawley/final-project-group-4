@@ -10,6 +10,10 @@ var port = 8000;
 app.engine('handlebars', exprhb({defaultLayout: 'main'}));
 app.set('view engine', 'handlebars');
 
+app.use(express.static('public'));
+app.use(express.json());
+
+
 app.get('/gallery', function(req, res, next){
     if(data){
         var inputs = {
@@ -41,9 +45,34 @@ app.get('/generator', function(req, res, next){
     res.render('generatorPage');
 });
 
+app.post('/generator/upload', function(req, res, next){
 
+    if(req.body){
+        data.push({
+            name: req.body.name,
+            tag: req.body.tag,
+            typeString: req.body.typeString,
+            speedString: req.body.speedString,
+            strPointsS: req.body.strPointsS,
+            dexPointsS: req.body.dexPointsS,
+            conPointsS: req.body.conPointsS,
+            intPointsS: req.body.intPointsS,
+            wisPointsS: req.body.wisPointsS,
+            chaPointsS: req.body.chaPointsS,
+            cr: req.body.cr,
+            sensesString: req.body.sensesString,
+            hpText: req.body.hpText,
+            acText: req.body.acText,
+            skillsString: req.body.skillsString
+        });
 
-app.use(express.static('public'));
+        
+        res.status(200).send("Monster added");
+    }else{
+        res.status(400).send("Error: no body");
+    }
+
+});
 
 
 app.get('*', function(req, res, next){
