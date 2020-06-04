@@ -49,6 +49,8 @@ app.post('/generator/upload', function(req, res, next){
 
     if(req.body){
         data.push({
+            name: req.body.name,
+            tag: req.body.tag,
             typeString: req.body.typeString,
             speedString: req.body.speedString,
             strPointsS: req.body.strPointsS,
@@ -63,7 +65,13 @@ app.post('/generator/upload', function(req, res, next){
             acText: req.body.acText,
             skillsString: req.body.skillsString
         });
+
+        
+        res.status(200).send("Monster added");
+    }else{
+        res.status(400).send("Error: no body");
     }
+
 });
 
 

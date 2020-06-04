@@ -256,7 +256,26 @@ function generateStatblock(){
 //We should also pop up an alert or something when we were able to succesfully upload
 function uploadStatBlock(){
     var jsonString = JSON.stringify(monsterData);
-    console.log(jsonString);
+    var request = new XMLHttpRequest();
+    var requestURL = '/generator/upload';
+    request.open('POST', requestURL);
+    request.setRequestHeader(
+        'Content-Type', 'application/json'
+    );
+    
+    request.send(jsonString);
+
+    request.addEventListener('load', function (event) {
+        if (event.target.status !== 200) {
+            var message = event.target.response;
+            alert("Error storing monster in database: " + message);
+        }else{
+          /*
+           * Update UI to indicate that photo was successfully
+           * stored.
+           */
+        }
+      });
 }
 
 /*Misc. string formatting funcitons*/
