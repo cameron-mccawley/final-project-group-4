@@ -47,7 +47,7 @@ app.get('/generator', function(req, res, next){
 
 app.post('/generator/upload', function(req, res, next){
 
-    if(req.body){
+    if(req.body && req.body.name && req.body.typeString && req.body.speedString && req.body.sensesString && req.body.skillsString){
         data.push({
             name: req.body.name,
             tag: req.body.tag,
@@ -66,7 +66,8 @@ app.post('/generator/upload', function(req, res, next){
             skillsString: req.body.skillsString
         });
 
-        
+        //Database stuff goes here
+
         res.status(200).send("Monster added");
     }else{
         res.status(400).send("Error: no body");
