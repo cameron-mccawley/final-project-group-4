@@ -2,6 +2,11 @@ body {
 	margin: 0;
 	padding: 0;
 }
+table{
+	table-layout: fixed;
+	text-align: left;
+	width: 100%;
+}
 
 .stat-block {
     text-align: left;
@@ -225,7 +230,7 @@ hr {
 	padding: 0.5px;
 	background-clip: border-box;
 	background-size: cover;
-	 background-position: center;
+	background-position: center;
 	background-image: url('images/statblockparch.jpg');
 	width: 100%;
 	text-align: center;
