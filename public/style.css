@@ -3,6 +3,17 @@ body {
 	padding: 0;
 }
 
+
+#stat-block-wrapper {
+    width: 400px;
+    justify-content: center;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 25px;
+}
+
+
 .stat-block {
     text-align: left;
     font-size: 12.5px;
@@ -12,11 +23,12 @@ body {
     width: 400px;
     background: #FDF1DC;
     background-size: cover;
-	background-position: center;
+    background-position: center;
     background-image: url('images/statblockparch.jpg');
     padding: 10px 10px 20px;
     box-sizing: border-box;
     font-family: 'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+
 }
 
 .orange-border {
@@ -257,3 +269,5 @@ ul.navlist li {
 	background-color: #262626;
 	border-bottom: 2px solid #e63b19;
 }
+
+
