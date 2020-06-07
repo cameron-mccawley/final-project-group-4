@@ -149,7 +149,7 @@ function getAllVariables(){
     monsterData.intPointsS = (monsterData.intPoints + " (" + getPlusOrMinus(getMod(monsterData.intPoints)) + ")");
     monsterData.wisPointsS = (monsterData.wisPoints + " (" + getPlusOrMinus(getMod(monsterData.wisPoints)) + ")");
     monsterData.chaPointsS = (monsterData.chaPoints + " (" + getPlusOrMinus(getMod(monsterData.chaPoints)) + ")");
-    
+
 
     //senses
     monsterData.blindsight = $("#blindsight-input").val();
@@ -159,7 +159,7 @@ function getAllVariables(){
     monsterData.truesight = $("#truesight-input").val();
     monsterData.passivePerception = getPP();
     monsterData.sensesString = getSenses();
-    
+
 
     //hp and ac stuff
     monsterData.hpText = $('#hp-input').val();
@@ -188,7 +188,7 @@ function getPP(){
     if($('#perception').prop("checked")){
         prof = 2;
     }
-    return 10 + getMod(monsterData.wisPoints) + prof; 
+    return 10 + getMod(monsterData.wisPoints) + prof;
 }
 
 //returns the string to be dislpayed in the speed portion of stat block
@@ -262,7 +262,7 @@ function uploadStatBlock(){
     request.setRequestHeader(
         'Content-Type', 'application/json'
     );
-    
+
     request.send(jsonString);
 
     request.addEventListener('load', function (event) {
@@ -274,6 +274,14 @@ function uploadStatBlock(){
            * Update UI to indicate that photo was successfully
            * stored.
            */
+          var statBlockTemplate = Handlebars.templates.statBlock;
+          var newStatBlock = statBlockTemplate({
+            url:,
+            caption:
+          });
+          var statBlockContainer = document.querySelector('');
+          statBlockContainer.insertAdjacentHTML();
+          alert("Stat Block has been succesfully created");
         }
       });
 }
@@ -304,5 +312,3 @@ function bold(some_string){
   alert(temp.bold());
   return temp;
 }
-
-
