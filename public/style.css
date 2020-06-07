@@ -5,9 +5,12 @@ body {
 }
 table{
 	margin: auto;
-	text-align: left;
+	text-align: center;
 	width: 100%;
 	border-collapse: collapse;
+}
+div{
+	text-align: center;
 }
 
 .stat-block {
