@@ -274,7 +274,7 @@ function uploadStatBlock(){
            * Update UI to indicate that photo was successfully
            * stored.
            */
-
+        } 
       });
 }
 
