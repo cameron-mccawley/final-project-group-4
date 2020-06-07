@@ -1,11 +1,13 @@
 body {
 	margin: 0;
 	padding: 0;
+	text-align: center;
 }
 table{
-	table-layout: fixed;
+	margin: auto;
 	text-align: left;
 	width: 100%;
+	border-collapse: collapse;
 }
 
 .stat-block {
@@ -180,9 +182,9 @@ button:hover {
 	border-color: #f6b93b;
 	transition: all 0.5s ease 0s;
 }
-input{
+.input{
 	box-sizing: border-box;
-	/*display:block;*/
+	display:block;
 	text-align: left;
 }
 tr{
@@ -190,7 +192,7 @@ tr{
 	display: inline-block;
 
 }
-.type-form{
+/*.type-form{
 	margin: 0 auto;
 	font-size: 21.5px;
 	display: inline-block;
@@ -198,7 +200,7 @@ tr{
 	padding: 20px;
 	border: 10px;
 	border-color: black;
-}
+}*/
 hr {
 	overflow: visible;
 	box-sizing: content-box;
@@ -209,7 +211,7 @@ hr {
 	margin-bottom: 15px;
 
 }
-/*.stat-block {
+.stat-block {
     text-align: left;
     font-size: 12.5px;
     line-height: 1.2em;
