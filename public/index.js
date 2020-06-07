@@ -274,15 +274,7 @@ function uploadStatBlock(){
            * Update UI to indicate that photo was successfully
            * stored.
            */
-          var statBlockTemplate = Handlebars.templates.statBlock;
-          var newStatBlock = statBlockTemplate({
-            url:,
-            caption:
-          });
-          var statBlockContainer = document.querySelector('');
-          statBlockContainer.insertAdjacentHTML();
-          alert("Stat Block has been succesfully created");
-        }
+
       });
 }
 
