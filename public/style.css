@@ -5,12 +5,13 @@ body {
 
 
 #stat-block-wrapper {
-    width: 400px;
+    width: 33%;
     justify-content: center;
     display: inline-flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin: 25px;
+    flex-grow: 1;
+    margin: 0;
 }
 
 
