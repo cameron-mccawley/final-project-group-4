@@ -1,8 +1,23 @@
 body {
+	background-image: url('images/statblockparch.jpg');
 	margin: 0;
 	padding: 0;
 }
-
+table{
+	margin: auto;
+	text-align: center;
+	border-collapse: collapse;
+}
+div{
+	text-align: center;
+}
+#skill-form td{
+	height: 20px;
+	width: 20px;
+	border: 20px;
+	padding: 20px;
+	word-wrap: break-word;	
+}
 .stat-block {
     text-align: left;
     font-size: 12.5px;
@@ -17,6 +32,7 @@ body {
     padding: 10px 10px 20px;
     box-sizing: border-box;
     font-family: 'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
+    margin: 0 auto;
 }
 
 .orange-border {
@@ -175,24 +191,15 @@ button:hover {
 	border-color: #f6b93b;
 	transition: all 0.5s ease 0s;
 }
-input{
+.input{
 	box-sizing: border-box;
-	/*display:block;*/
+	display:block;
 	text-align: left;
 }
 tr{
 	box-sizing: border-box;
 	display: inline-block;
 
-}
-.type-form{
-	margin: 0 auto;
-	font-size: 21.5px;
-	display: inline-block;
-	vertical-align: top;
-	padding: 20px;
-	border: 10px;
-	border-color: black;
 }
 hr {
 	overflow: visible;
@@ -204,7 +211,7 @@ hr {
 	margin-bottom: 15px;
 
 }
-/*.stat-block {
+.stat-block {
     text-align: left;
     font-size: 12.5px;
     line-height: 1.2em;
@@ -225,7 +232,7 @@ hr {
 	padding: 0px;
 	background-clip: border-box;
 	background-size: cover;
-	 background-position: center;
+	background-position: center;
 	background-image: url('images/statblockparch.jpg');
 	width: 100%;
 	text-align: center;
