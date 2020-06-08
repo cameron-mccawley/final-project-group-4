@@ -11,6 +11,9 @@ table{
 div{
 	text-align: center;
 }
+#stat-block-wrapper div{
+	text-align: left;
+}
 #skill-form td{
 	height: 20px;
 	width: 20px;
