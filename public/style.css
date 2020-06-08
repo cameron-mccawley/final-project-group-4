@@ -32,8 +32,11 @@ div{
 	width: 20px;
 	border: 20px;
 	padding: 20px;
-	word-wrap: break-word;	
+    word-wrap: break-word;
+    white-space: nowrap;	
 }
+
+
 .stat-block {
     text-align: left;
     font-size: 12.5px;
