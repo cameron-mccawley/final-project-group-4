@@ -270,10 +270,7 @@ function uploadStatBlock(){
             var message = event.target.response;
             alert("Error storing monster in database: " + message);
         }else{
-          /*
-           * Update UI to indicate that photo was successfully
-           * stored.
-           */
+            alert("Statblock successfully uploaded!");
         } 
       });
 }

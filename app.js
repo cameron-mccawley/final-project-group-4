@@ -2,6 +2,8 @@ var path = require('path');
 var express = require('express');
 var exprhb = require('express-handlebars');
 var data = require('./data.json');
+var fs = require("fs");
+
 
 var app = express();
 
@@ -65,8 +67,12 @@ app.post('/generator/upload', function(req, res, next){
             acText: req.body.acText,
             skillsString: req.body.skillsString
         });
+        console.log(data);
+        fs.writeFile("data.json", JSON.stringify(data), err => {
+            if(err) throw err;
 
-        //Database stuff goes here
+            console.log("done writing");
+        });
 
         res.status(200).send("Monster added");
     }else{
