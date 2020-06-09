@@ -67,11 +67,8 @@ app.post('/generator/upload', function(req, res, next){
             acText: req.body.acText,
             skillsString: req.body.skillsString
         });
-        console.log(data);
         fs.writeFile("data.json", JSON.stringify(data), err => {
             if(err) throw err;
-
-            console.log("done writing");
         });
 
         res.status(200).send("Monster added");
