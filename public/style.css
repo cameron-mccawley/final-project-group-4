@@ -21,6 +21,7 @@ div{
 	padding: 20px;
 	word-wrap: break-word;	
 }
+
 .stat-block {
     text-align: left;
     font-size: 12.5px;
@@ -266,4 +267,10 @@ ul.navlist li {
 	color: #e63b19;
 	background-color: #262626;
 	border-bottom: 2px solid #e63b19;
+}
+.footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width 100%;
 }
