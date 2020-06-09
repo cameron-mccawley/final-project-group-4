@@ -269,8 +269,7 @@ ul.navlist li {
 	border-bottom: 2px solid #e63b19;
 }
 .footer {
-	position: fixed;
 	left: 0;
 	bottom: 0;
-	width 100%;
+	width: 100%;
 }
