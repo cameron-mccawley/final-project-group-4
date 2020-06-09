@@ -27,7 +27,7 @@ var monsterData = {
     wisPointsS: "",
     chaPointsS: "",
 
-    cr: 1,
+    cr: "1",
 
     passivePerception: 0,
     blindsight: 0,
@@ -175,7 +175,7 @@ function getAllVariables(){
     monsterData.speedString = getSpeed();
 
     //cr
-    monsterData.cr = $('#cr-input').val();
+    monsterData.cr = $('#cr-input').val().trim();
 
     //skills
     monsterData.skillsString = getSkills();
@@ -274,7 +274,7 @@ function uploadStatBlock(){
            * Update UI to indicate that photo was successfully
            * stored.
            */
-        } 
+        }
       });
 }
 

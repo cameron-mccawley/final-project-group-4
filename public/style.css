@@ -3,14 +3,17 @@ body {
 	margin: 0;
 	padding: 0;
 }
+
 table{
 	margin: auto;
 	text-align: center;
 	border-collapse: collapse;
 }
+
 div{
 	text-align: center;
 }
+
 #stat-block-wrapper div{
 	text-align: left;
 }
@@ -19,7 +22,7 @@ div{
 	width: 20px;
 	border: 20px;
 	padding: 20px;
-	word-wrap: break-word;	
+	word-wrap: break-word;
 }
 .stat-block {
     text-align: left;
@@ -178,6 +181,7 @@ div{
 #print-block .orange-border {
     display: none;
 }
+
 button {
 	color:#494949;
 	text-transform: uppercase;
@@ -189,21 +193,25 @@ button {
 	display: inline block;
 	transition: all 0.5s ease 0s;
 }
+
 button:hover {
 	background: #f6b93b;
 	border-color: #f6b93b;
 	transition: all 0.5s ease 0s;
 }
+
 .input{
 	box-sizing: border-box;
 	display:block;
 	text-align: left;
 }
+
 tr{
 	box-sizing: border-box;
 	display: inline-block;
 
 }
+
 hr {
 	overflow: visible;
 	box-sizing: content-box;
@@ -214,6 +222,7 @@ hr {
 	margin-bottom: 15px;
 
 }
+
 .stat-block {
     text-align: left;
     font-size: 12.5px;
@@ -228,17 +237,16 @@ hr {
     padding: 10px 10px 20px;
     box-sizing: border-box;
     font-family: 'Noto Sans', 'Myriad Pro', Calibri, Helvetica, Arial, sans-serif;
-}*/
+}
+
 #nav {
 	background-color: #FDF1DC;
 	margin: 0;
-	padding: 0px;
-	background-clip: border-box;
-	background-size: cover;
-	background-position: center;
-	background-image: url('images/statblockparch.jpg');
+	padding: 0;
+	background: none;
 	width: 100%;
 	text-align: center;
+	border-bottom: 2px solid #e63b19;
 }
 
 .navitem.navlink a{
