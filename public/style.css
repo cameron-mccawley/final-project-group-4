@@ -293,8 +293,8 @@ ul.navlist li {
 }
 
 .footer {
-	left: 0;
-	bottom: 0;
 	width: 100%;
-	height: 20px;
+	border-top: 1px solid grey;
+	margin-bottom: 7px;
+	font-family: 'Libre Baskerville', 'Lora', 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif;
 }
