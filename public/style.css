@@ -309,3 +309,21 @@ ul.navlist li {
 	position: relative;
 	padding-bottom: 100px;
 }
+
+input{
+    font-family: Tahoma, Georgia, Ariel, sans-serif;
+    font-size: .8rem;
+}
+
+input[type=text]{
+    width: 95%;
+    height: 1.5rem;
+}
+
+textarea{
+    font-family: monospace;
+    font-size: .8rem;
+    letter-spacing: normal;
+    line-height: normal;
+    width: 80%;
+}
