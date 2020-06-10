@@ -271,7 +271,7 @@ function uploadStatBlock(){
             alert("Error storing monster in database: " + message);
         }else{
             alert("Statblock successfully uploaded!");
-        } 
+        }
       });
 }
 
