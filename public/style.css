@@ -1,4 +1,7 @@
 body {
+	background: #FDF1DC;
+	background-size: cover;
+	 background-position: center;
 	background-image: url('images/statblockparch.jpg');
 	margin: 0;
 	padding: 0;
@@ -295,6 +298,14 @@ ul.navlist li {
 .footer {
 	width: 100%;
 	border-top: 1px solid grey;
-	margin-bottom: 7px;
+	margin-bottom: 5px;
 	font-family: 'Libre Baskerville', 'Lora', 'Calisto MT', 'Bookman Old Style', Bookman, 'Goudy Old Style', Garamond, 'Hoefler Text', 'Bitstream Charter', Georgia, serif;
+	position: absolute;
+	bottom: 0;
+}
+
+.all-content {
+	min-height: 100vh;
+	position: relative;
+	padding-bottom: 100px;
 }
