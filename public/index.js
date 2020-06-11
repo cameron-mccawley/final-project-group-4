@@ -301,3 +301,16 @@ function bold(some_string){
   alert(temp.bold());
   return temp;
 }
+
+function addAbilityInput(type){
+    let abilityName = $("#abilities-name-input").val().trim();
+    let abilityDesc = $("#abilities-desc-input").val().trim();
+
+    //add ability
+
+    //display
+
+    //clear forms
+    $("#abilities-name-input").val("");
+    $("#abilities-desc-input").val("");
+}
